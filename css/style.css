@@ -34,7 +34,6 @@ header i{
 	flex: 2;
 }
 .today-weather span{
-	position: relative;
 	display: block;
 	height: 16%;
 	width: 85%;
@@ -51,7 +50,7 @@ header i{
 .temperature{
 	text-align: center;
 	font-size: 11rem;
-	top: -10%;
+	transform: translateY(-80%);
 }
 .AllDayTemp{
 	text-align:right;
