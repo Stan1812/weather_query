@@ -48,9 +48,9 @@ header i{
 	font-size: 3rem;
 }
 .temperature{
+	height: 1%;
 	text-align: center;
 	font-size: 11rem;
-	transform: translateY(-80%);
 }
 .AllDayTemp{
 	text-align:right;
