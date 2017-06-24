@@ -134,9 +134,12 @@ function setFutureIcon(id, i){
   future_index.icons[i].className = 'weather_pic-' + wid
 }
 var queryBut=document.querySelector('#queryBtn');
+var query_info=document.querySelector('#query_in');
+
  queryBut.onclick = function(){
-   console.log(1)
-  var city = '南昌'
+   console.log('1')
+  var city = query_info.value;
+  console.log(city)
   var url = 'http://v.juhe.cn/weather/index?format=2&cityname=' + city + '&key=849d0def77dc141aa14db254924bca39&callback=dataUpdating'
-  getJSON(url)   
+   getJSON(url)
 }

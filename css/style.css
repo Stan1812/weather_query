@@ -61,6 +61,23 @@ header i{
 	flex:3;
 	background-color: #383568;
 	font-size: 6rem;
+	width: 100%;
+}
+#query{
+	display: flex;
+	height: 5vh;
+	justify-content: center;
+	align-items: center;
+}
+#query_box input{
+	width:30vw;
+	height: 5vh;
+	background:transparent;
+	font-size: 4rem;
+	border-color: transparent;
+	border-bottom:2px solid #07c6ff;
+	color: white;
+
 }
 #container span{
 	display: block;
@@ -121,13 +138,7 @@ li:nth-child(3){
 	position: relative;
 	height: 20%;
 }
-#queryBtn{
-	display: absolute;
-	width: 100px;
-	height: 50px;
-	font-size: 2rem;
-	background:red;
-}
+
 .weather_pic-0 {
     background-position: 2% 2%;
 }
