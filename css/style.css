@@ -1,0 +1,217 @@
+*{margin:0;
+	padding: 0;}
+html{
+	font-size: 62.5%;
+}
+body{
+	font-size: 3rem;
+	display: -webkit-flex;
+}
+#main_wraper{
+	display: -webkit-flex;
+	flex-direction:column;
+	height: 100vh;
+	width: 100vw;
+}
+header{
+	-webkit-flex:1;
+	display: flex;
+	background-color:#35317a;
+}
+header i,.today-weather{
+	height: 100%;
+}
+header i{
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+    background-size: 800%;
+    background-image: url('../imgs/weather-bg.png');
+   background-position: 2% 2%; 
+}
+.today-weather{
+	flex: 2;
+}
+.today-weather span{
+	position: relative;
+	display: block;
+	height: 16%;
+	width: 85%;
+	color: white;
+	margin:0 auto;
+}
+.date_y{
+	text-align: right;
+}
+.week{
+	text-align: right;
+	font-size: 3rem;
+}
+.temperature{
+	text-align: center;
+	font-size: 11rem;
+	top: -10%;
+}
+.AllDayTemp{
+	text-align:right;
+	top: -20%;
+}
+#container{
+	flex:3;
+	background-color: #383568;
+	font-size: 6rem;
+}
+#container span{
+	display: block;
+	margin:10% 10%;
+	font-family:Helvetica  Trebuchet MS Akzidenz-Grotesk;
+}
+#info_text span:nth-child(odd){
+	color:#fc09a1;
+	font-size: 6rem;
+	font-weight: 700;
+}
+#info_text span:nth-child(even){
+	color: #066efa;
+	font-size: 14rem;
+	font-weight: 500;
+}
+#info_text span:last-child{
+	color: white;
+	font-size: 3rem;
+}
+footer{
+	flex: 1;
+	background-color: #2d396a;
+}
+footer ul{
+	text-align: center;
+	display: inline-flex;
+	width: 100%;
+	height: 100%; 
+	color: #ff5722;
+}
+footer ul li{
+	flex: 1;
+	height: 100%;
+	list-style:none;
+} 
+li:nth-child(1){
+	background-color: #35317a;
+}
+li:nth-child(2){
+	background-color: #33517a;
+}
+li:nth-child(3){
+	background-color: #31417a;
+}
+#future_weather li i{
+	display: block;
+	height:50%;
+	width: 50%;
+	margin:0 auto;
+	background-repeat: no-repeat;
+    background-size: 800%;
+    background-image: url('../imgs/weather-bg.png');
+}
+#future_weather span {
+	display: block;
+	width: 100%;
+	position: relative;
+	height: 20%;
+}
+#queryBtn{
+	display: absolute;
+	width: 100px;
+	height: 50px;
+	font-size: 2rem;
+	background:red;
+}
+.weather_pic-0 {
+    background-position: 2% 2%;
+}
+
+.weather_pic-1 {
+    background-position: 27% 2%;
+}
+
+.weather_pic-3 {
+    background-position: 77% 2%;
+}
+
+.weather_pic-4 {
+    background-position: 98% 2%;
+}
+
+.weather_pic-6 {
+    background-position: 27% 26%;
+}
+
+.weather_pic-7 {
+    background-position: 54% 26%;
+}
+
+.weather_pic-8 {
+    background-position: 77%  26%;
+}
+
+.weather_pic-9 {
+    background-position: 98%  26%;
+}
+
+.weather_pic-10 {
+    background-position: 2%  50%;
+}
+
+.weather_pic-11 {
+    background-position: 27%  50%;
+}
+
+.weather_pic-12 {
+    background-position: 54% 50%;
+}
+
+.weather_pic-13 {
+    background-position: 77% 50%;
+}
+
+.weather_pic-14 {
+    background-position: 98% 50%;
+}
+
+.weather_pic-15 {
+    background-position: 2%  72%;
+}
+
+.weather_pic-16 {
+    background-position: 2%  72%;
+}
+
+.weather_pic-17 {
+    background-position: 27%  72%;
+}
+
+.weather_pic-18 {
+    background-position: 77% 72%;
+}
+
+.weather_pic-19 {
+    background-position: 98% 72%;
+}
+
+.weather_pic-20 {
+    background-position:77%  98%;
+}
+
+.weather_pic-29 {
+    background-position: 27%  98%;
+}
+
+.weather_pic-30 {
+    background-position: 54%   98%;
+}
+
+.weather_pic-53 {
+    background-position: 98%   98%;
+}
