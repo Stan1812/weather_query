@@ -50,8 +50,8 @@ header i{
 }
 .temperature{
 	height: 1%;
-	text-align: center;
-	font-size: 11rem;
+	text-align: right;
+	font-size: 10rem;
 }
 .AllDayTemp{
 	text-align:right;
@@ -99,7 +99,7 @@ header i{
 	font-size: 3rem;
 }
 footer{
-	flex: 1;
+	flex: 1.7;
 	background-color: #2d396a;
 }
 footer ul{
@@ -136,7 +136,7 @@ li:nth-child(3){
 	display: block;
 	width: 100%;
 	position: relative;
-	height: 20%;
+	height: 13%;
 }
 
 .weather_pic-0 {

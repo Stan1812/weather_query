@@ -10,8 +10,8 @@ today_index={
 	temperature:today.querySelector('.temperature'),
 	allDayTemp:today.querySelector('.AllDayTemp'),
 	weather:today.querySelector('.weather'),
-	wind_direction:today.querySelector('.wind_direction'),
-	wind_strangth:today.querySelector('.wind_strangth'),
+	wind_dire:today.querySelector('.wind_direction'),
+	wind_stre:today.querySelector('.wind_strength'),
 	icon:today.querySelector('i')
 }
 
@@ -22,7 +22,8 @@ container_tips={
 future_index={
 	dates:future.querySelectorAll('#date'),
 	icons:future.querySelectorAll('i'),
-	temperatures:future.querySelectorAll('#fu_temp')
+	temperatures:future.querySelectorAll('#fu_temp'),
+  weathers:future.querySelectorAll('#future_weather')
 }
 length = future_index.dates.length
 
@@ -33,9 +34,11 @@ function getJSON(url) {
 }
 
 function dataUpdating(json) {
-	console.log	(json)
+  //test
+	console.log	(json) 
+  console.log(json.resultcode,json.reason) 
+  
   var result = json.result
-
   // 今日信息更新
   todayDataUpdating(result)
   //tips更新
@@ -47,11 +50,11 @@ function dataUpdating(json) {
 function todayDataUpdating (result){
 	today_index.date_y.innerHTML=result.today.date_y
 	today_index.week.innerHTML=result.today.week
-	today_index.temperature.innerHTML=result.sk.temp
+	today_index.temperature.innerHTML=result.sk.temp+'℃'
 	today_index.allDayTemp.innerHTML=result.today.temperature
 	today_index.weather.innerHTML=result.today.weather
-	today_index.wind_direction=result.sk.wind_direction
-	today_index.wind_strangth=result.sk.wind_strangth
+	today_index.wind_dire.innerHTML=result.sk.wind_direction
+	today_index.wind_stre.innerHTML=result.sk.wind_strength
 	setTodayIcon(result.today.weather_id.fa)
 }
 
@@ -73,6 +76,7 @@ function futureDataUpdating (result){
       .splice(6, 2)
       .join('') + '日'
     future_index.dates[i].innerHTML = _date
+    future_index.weathers[i].innerHTML=result.future[i+1].weather
     future_index.temperatures[i].innerHTML = result.future[i + 1].temperature
     setFutureIcon(result.future[i + 1].weather_id.fa, i)
   }
@@ -133,6 +137,7 @@ function setFutureIcon(id, i){
   var wid = weatherType(id)
   future_index.icons[i].className = 'weather_pic-' + wid
 }
+
 var queryBut=document.querySelector('#queryBtn');
 var query_info=document.querySelector('#query_in');
 
@@ -143,3 +148,16 @@ var query_info=document.querySelector('#query_in');
   var url = 'http://v.juhe.cn/weather/index?format=2&cityname=' + city + '&key=849d0def77dc141aa14db254924bca39&callback=dataUpdating'
    getJSON(url)
 }
+
+/*
+
+ *根据GPS坐标获取天气
+window.onload=function(){
+  navigator.geolocation.getCurrentPosition(function(position) {
+   var lon=position.coords.latitude
+   var lat=position.coords.longitude)
+   var url = 'http://v.juhe.cn/weather/index?format=2&key=849d0def77dc141aa14db254924bca39&callback=dataUpdating'&lon='+lon+'&lat='+lat+' 
+    getJSON(url);
+  });
+}
+ */
